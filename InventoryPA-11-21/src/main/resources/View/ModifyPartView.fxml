@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModifyPartController">
+   <children>
+      <Label layoutX="66.0" layoutY="57.0" text="Modify Part">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="inHouseRadio" layoutX="220.0" layoutY="57.0" mnemonicParsing="false" onAction="#showInHouseModify" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="tGroup2" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="outSourcedRadio" layoutX="354.0" layoutY="57.0" mnemonicParsing="false" onAction="#showOutsourcedModify" text="Outsourced" toggleGroup="$tGroup2" />
+      <Label layoutX="77.0" layoutY="116.0" text="ID" />
+      <Label layoutX="77.0" layoutY="150.0" text="Name" />
+      <Label layoutX="77.0" layoutY="177.0" text="Inv" />
+      <Label layoutX="77.0" layoutY="206.0" text="Price/Cost" />
+      <Label fx:id="changeLabel2" layoutX="79.0" layoutY="267.0" text="Machine ID" />
+      <TextField fx:id="partIdTF" editable="false" layoutX="181.0" layoutY="112.0" promptText="Auto Gen - Disabled">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="nameField" layoutX="181.0" layoutY="146.0" />
+      <TextField fx:id="stockField" layoutX="181.0" layoutY="173.0" />
+      <TextField fx:id="priceCostField" layoutX="181.0" layoutY="202.0" />
+      <TextField fx:id="maxField" layoutX="181.0" layoutY="232.0" />
+      <Button fx:id="saveModifyPart1" layoutX="328.0" layoutY="316.0" mnemonicParsing="false" onAction="#saveModifyPart" text="Save" />
+      <Button fx:id="cancelModifyPart" layoutX="385.0" layoutY="316.0" mnemonicParsing="false" onAction="#onCancel" text="Cancel" />
+      <Label layoutX="375.0" layoutY="236.0" text="Min" />
+      <Label layoutX="79.0" layoutY="236.0" text="Max" />
+      <TextField fx:id="machineIdField" layoutX="181.0" layoutY="263.0" />
+      <TextField fx:id="minField" layoutX="418.0" layoutY="232.0" />
+   </children>
+</AnchorPane>
